@@ -3,15 +3,14 @@ const Discord = require('discord.js');
 const { measureMemory } = require('vm');
 const ytdl = require('ytdl-core');
 const fs = require('fs')
-
 const { YTSearcher } = require('ytsearcher');
-
 const searcher = new YTSearcher({
-    key: "AIzaSyDsGp7lYJOOd5EI2Rw42QYM_K7SZp1Iph4",
+    key: process.env.YOUTUBE_API_KEY,
     revealed: true
 });
-
 const client = new Discord.Client();
+const prefix = (`>`);
+
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
 
@@ -69,4 +68,4 @@ client.on("message", async(message) => {
         
 })
 
-client.login(process.env.token)
+client.login(process.env.TOKEN);
