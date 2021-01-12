@@ -9,7 +9,6 @@ const searcher = new YTSearcher({
     revealed: true
 });
 const client = new Discord.Client();
-const prefix = (`>`);
 
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
@@ -49,7 +48,7 @@ client.on("guildMemberAdd", member => {
 
 
 client.on("message", async(message) => {
-    const prefix = '!';
+    const prefix = '>';
 
     if(!message.content.startsWith(prefix)) return
     
