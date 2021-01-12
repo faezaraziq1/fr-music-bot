@@ -4,7 +4,7 @@ const lyricsFinder = require('lyrics-finder');
 
 module.exports.run = async(client, message, args, queue, searcher) => {
     if (args.length < 1)
-        return message.channel.send("Please enter the artist name first. !lyrics <Artist Name>")
+        return message.channel.send("Please enter the artist name first. >lyrics <Artist Name>")
     
     let artist = args.join(" ");
     let songName = '';
