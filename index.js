@@ -33,6 +33,7 @@ const queue = new Map();
 
 client.on("ready", () => {
     console.log("I am online!")
+    client.user.setActivity("Some Music!");
 })
 
 
