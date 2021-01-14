@@ -6,7 +6,7 @@ module.exports.run = (client, message, args, queue, searcher) => {
         return message.channel.send("You need to join the voice chat first!")
     serverQueue.songs = [];
     serverQueue.connection.dispatcher.end();
-    message.channel.send("Stopped!")
+        return message.channel.send("Stopped!")
 
 module.exports.config = {
     name: "stop",
